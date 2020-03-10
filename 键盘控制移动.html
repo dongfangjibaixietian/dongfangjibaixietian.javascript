@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>无标题文档</title>
+        <style>
+            #div1 {width: 100px;height: 100px;background: #ccc;position: absolute;}
+        </style>
+    </head>
+
+    <body>
+        <script type="javascript">
+            document.onkeydown=function(ev)
+            {
+                var oEvent=ev||event;
+                var oDiv=document.getElementById('div1');
+                if(oEvent.keycode==37)
+                {
+                    oDiv.style.left=oDiv.offsetLeft-10+'px';
+                }
+                else if(oEvent.keycode==39)
+                {
+                    oDiv.style.left=oDiv.offsetLeft+10+'px';
+                }
+            };
+        </script>
+        <div id="div1"></div>
+    </body>
+</html>
